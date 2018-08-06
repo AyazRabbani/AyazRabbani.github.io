@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2018 by AyazRabbani (http://jsbin.com/redagup/9/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  
+  <title>Trick Your Friends</title>
+<style id="jsbin-css">
+body{
+  background-color:silver;
+  text-align:center;
+    margin:20px;
+   
+}
+h1{
+  color:white;
+    
+  
+}
+h2{
+  color:blue;
+  
+}
+h3{
+  color:red
+}
+#line{
+  color:red
+}
+.background-image {
+  background-image: url("https://static1.squarespace.com/static/58e577f9893fc0a18291fd43/t/5b63583103ce6459fc32c71d/1533237298736/MCMCwebdevclass.png");
+  background-size: cover;
+    padding-top: 13%;
+    padding-bottom: 13%;
+    padding-right: 13%
+      
+    width: 100 %;
+  margin: 0 ! important;
+}
+
+
+
+
+  
+
+</style>
+</head>
+  <div class="jumbotron background-image">
+    <div class="container">
+      
+    </div>
+  </div>
+<body>
+  <h1>Got in a Feud With Someone?</h1>
+  <h2>Prank Them With This Anonymous Text Sender</h2>
+  <h3 id="line">Enter Your Victims Phone Number and a Text You Want to Send</h3>
+  
+  
+  <div class="form-inline">
+    <div class="input">
+      <input id="phone" class="form-control" placeholder="Victim's Number" required >
+      
+      <input id="message" class="form-control" placeholder="Prank Message" required >
+      <button id="submit" type="button" class="btn btn-danger">Prank</botton>    
+
+  
+  
+  </div>  
+  
+    
+<script id="jsbin-javascript">
+$("#submit").click(function(){
+  
+var number = $('#phone').val();
+          var msg = $('#message').val();
+          $.get('http://mrpresident.io/custommessage',{"phone":number, "message":msg}, function()
+        {
+         
+        });
+});
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+  
+  
+  <footer>
+    
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+   
+  </footer>
+</html>
+  
+ 
